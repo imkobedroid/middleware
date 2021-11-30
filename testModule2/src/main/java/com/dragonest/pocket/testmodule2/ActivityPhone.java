@@ -22,8 +22,8 @@ public class ActivityPhone extends AppCompatActivity {
         setContentView(R.layout.activity_main_phone);
 
         findViewById(R.id.btn).setOnClickListener(v -> {
-            String s=  getIntent().getExtras().getString("test");
-            Toast.makeText(ActivityPhone.this,s,Toast.LENGTH_SHORT).show();
+            String s = getIntent().getExtras().getString("test");
+            Toast.makeText(ActivityPhone.this, s, Toast.LENGTH_SHORT).show();
         });
     }
 }

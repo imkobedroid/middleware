@@ -18,7 +18,6 @@ dependencies {
 
     // 帮助我们通过类调用的方式来生成Java代码[JavaPoet]
     implementation 'com.squareup:javapoet:1.13.0'
-    implementation 'com.squareup:kotlinpoet:0.2.0'
 
 
 
