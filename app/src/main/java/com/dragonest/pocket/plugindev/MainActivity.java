@@ -1,9 +1,8 @@
 package com.dragonest.pocket.plugindev;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,8 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.dragonest.pocket.annotation.DIActivity;
 import com.dragonest.pocket.annotation.DIView;
 import com.dragonest.pocket.annotation.Test;
-
-import org.jetbrains.annotations.TestOnly;
+import com.dragonest.pocket.routeframework.BRouter;
+import com.dragonest.pocket.testmodule1.ActivityUser;
 
 /**
  * @author Dsh  imkobedroid@gmail.com
@@ -35,7 +34,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         DIMainActivity.bindView(this);
-        btn.setOnClickListener(v -> Toast.makeText(MainActivity.this, "成功", Toast.LENGTH_SHORT).show());
+        BRouter.getInstance().init(this);
+        btn.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, ActivityUser.class))
+                );
     }
 
 
